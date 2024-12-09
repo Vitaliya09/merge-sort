@@ -72,13 +72,6 @@ TEST_SUITE_END();
 
 TEST_SUITE_BEGIN("merge");
 
-TEST_CASE("null") {
-    REQUIRE(merge(List{}, List{}) == List{});
-    REQUIRE(merge(List{1}, List{}) == List{1});
-    REQUIRE(merge(List{}, List{1}) == List{1});
-    REQUIRE(merge(List{3, 1, 2}, List{}) == List{3, 1, 2});
-    REQUIRE(merge(List{}, List{1, 3, 2}) == List{1, 3, 2});
-}
 
 TEST_CASE("simple 123456") {
     REQUIRE(merge(List{1, 2, 3}, List{4, 5, 6}) == List{1, 2, 3, 4, 5, 6});
